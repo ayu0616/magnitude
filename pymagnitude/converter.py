@@ -184,8 +184,11 @@ def convert(input_file_path, output_file_path=None,
         except ImportError:
             raise ImportError("You need gensim >= 3.3.0 installed with pip \
                 (`pip install gensim`) to convert binary files.")
-        keyed_vectors = KeyedVectors.load_word2vec_format(
-            input_file_path, binary=input_is_binary)
+        try:
+            keyed_vectors = KeyedVectors.load_word2vec_format(
+                input_file_path, binary=input_is_binary)
+        except:
+            keyed_vectors = gensim.models.fasttext.load_facebook_model(input_file_path).wv
         number_of_keys = len(keyed_vectors.vectors)
         dimensions = len(keyed_vectors.vectors[0])
     elif input_is_text:
