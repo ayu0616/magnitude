@@ -99,34 +99,6 @@ wheels = [
 ]
 
 [[package]]
-name = "magnitude"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "annoy" },
-    { name = "fasteners" },
-    { name = "h5py" },
-    { name = "lz4" },
-    { name = "numpy" },
-    { name = "torch" },
-    { name = "xxhash" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "annoy", specifier = ">=1.11.4" },
-    { name = "fasteners", specifier = ">=0.14.1" },
-    { name = "h5py", specifier = ">=2.8.0" },
-    { name = "lz4", specifier = ">=1.0.0" },
-    { name = "numpy", specifier = ">=1.14.0" },
-    { name = "torch", specifier = ">=2.5.1" },
-    { name = "xxhash", specifier = ">=1.0.1" },
-]
-
-[package.metadata.requires-dev]
-dev = [{ name = "magnitude", virtual = "." }]
-
-[[package]]
 name = "markupsafe"
 version = "3.0.2"
 source = { registry = "https://pypi.org/simple" }
@@ -359,6 +331,34 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/06/39/471f581edbb7804b39e8063d92fc8305bdc7a80ae5c07dbe6ea5c50d14a5/nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_aarch64.whl", hash = "sha256:7959ad635db13edf4fc65c06a6e9f9e55fc2f92596db928d169c0bb031e88ef3", size = 100417 },
     { url = "https://files.pythonhosted.org/packages/87/20/199b8713428322a2f22b722c62b8cc278cc53dffa9705d744484b5035ee9/nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl", hash = "sha256:781e950d9b9f60d8241ccea575b32f5105a5baf4c2351cab5256a24869f12a1a", size = 99144 },
 ]
+
+[[package]]
+name = "pymagnitude"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "annoy" },
+    { name = "fasteners" },
+    { name = "h5py" },
+    { name = "lz4" },
+    { name = "numpy" },
+    { name = "torch" },
+    { name = "xxhash" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "annoy", specifier = ">=1.11.4" },
+    { name = "fasteners", specifier = ">=0.14.1" },
+    { name = "h5py", specifier = ">=2.8.0" },
+    { name = "lz4", specifier = ">=1.0.0" },
+    { name = "numpy", specifier = ">=1.14.0" },
+    { name = "torch", specifier = ">=2.5.1" },
+    { name = "xxhash", specifier = ">=1.0.1" },
+]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pymagnitude", virtual = "." }]
 
 [[package]]
 name = "setuptools"
